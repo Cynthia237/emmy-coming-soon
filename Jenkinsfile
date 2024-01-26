@@ -6,12 +6,13 @@ pipeline{
     environment {
         CI = false
     }    
-    stages
+    stages{
        stage('checkout') {
           steps{       
           // check out the source code from your repository
           sh 'git pull https://github.com/Cynthia237/emmy-coming-soon.git/'
-          checkout        
+          checkout  
+          }    
         }
     
         stage('build') {
@@ -23,6 +24,6 @@ pipeline{
                 '''
             }
         }
-        }
+  }
              
 }
