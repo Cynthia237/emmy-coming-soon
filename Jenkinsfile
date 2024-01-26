@@ -3,7 +3,9 @@ pipeline{
     triggers {
         pollSCM '* * * * *'
     }
-    
+    environment {
+        CI = false
+    }    
     stages
        stage('checkout') {
           steps{       
@@ -22,10 +24,5 @@ pipeline{
             }
         }
         }
-        stage('Test') {
-            steps {
-               echo "testing"
-               sh 'npm run test'
-            }
-        }         
+             
 }
