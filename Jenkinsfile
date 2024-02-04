@@ -19,10 +19,10 @@ pipeline{
      stage('dockerising') {
             steps {
                 // dockerising
-                sh 'docker login -u Cynthua --password-stdin C670219621#'
+                sh 'docker login -u mncy580 --password-stdin C670219621#'
                 sh 'docker build -t emmy-coming-soon:6 .'
-                sh 'docker tag emmyride:6 Cynthua/emmy-coming-soon:6'
-                sh 'docker push Cynthua/emmy-coming-soon:6'
+                sh 'docker tag emmyride:6 mncy580/emmy-coming-soon:6'
+                sh 'docker push mncy580/emmy-coming-soon:6'
             }
       }   
   }
