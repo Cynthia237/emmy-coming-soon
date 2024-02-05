@@ -21,7 +21,7 @@ pipeline{
                 // dockerising
                 sh 'docker login -u mncy580 -p C670219621#'
                 sh 'docker build -t emmy-coming-soon:6 .'
-                sh 'docker tag emmy-comimg-soon:6 mncy580/emmy-coming-soon:6'
+                sh 'docker tag emmy-coming-soon:6 mncy580/emmy-coming-soon:6'
                 sh 'docker push mncy580/emmy-coming-soon:6'
             }
       }   
