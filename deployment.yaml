@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: momoapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: momoapp
+  template:
+    metadata:
+      labels:
+        app: momoapp
+    spec:
+      containers:
+        - name: momoapp
+
+          image: dkfolefac/momoapp
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500"
+              
+          ports:
+            - containerPort: 80

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emmy-coming-soon
+spec:
+  replicas: 4
+  selector:
+    matchLabel:
+  app: emmy-coming-soon
+  template:
+    metadata:
+      labels:
+        app: emmy-coming-soon
+    spec:
+      containers:
+      - name: emmy-coming-soon
+        image: dkfolefac/emmy-coming-soo
+    ports:
+         - containerPort: 80

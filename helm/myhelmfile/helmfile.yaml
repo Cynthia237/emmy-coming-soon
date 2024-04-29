@@ -1,0 +1,5 @@
+
+releases:
+  -name: momo
+   chart: ../helm
+   installed: true
